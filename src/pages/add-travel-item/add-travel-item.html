@@ -1,0 +1,42 @@
+<!--
+  Generated template for the AddTravelItemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add Travel Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input [(ngModel)]="item.name" placeholder="Trevi Fountain"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Place</ion-label>
+    <ion-input [(ngModel)]="item.place" placeholder="Rome, Italy"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime [(ngModel)]="item.date"
+        displayFormat="MMM DD, YYYY"
+        min="2018-01-01"
+        max="2020-12-31"
+        ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tag</ion-label>
+    <ion-input [(ngModel)]="item.tag" placeholder="landmark"></ion-input>
+  </ion-item>
+
+  <button ion-button block clear (click)="addTravelItem(item)">Add</button>
+
+</ion-content>
